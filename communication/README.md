@@ -165,6 +165,10 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         sudo systemctl enable jetson-launcher.service  # Enable it to run on boot
         sudo systemctl start jetson-launcher.service   # Start it right now
         ```
+    5. Restart
+       ```
+       sudo systemctl restart jetson-launcher.service
+       ```
 
 ---
 
