@@ -159,6 +159,7 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         ```
 
     3.  Save the file (`Ctrl+O`, `Enter`) and exit (`Ctrl+X`).
+    
        a) Unloack sudo key (for jetson only)
        ```
        sudo visudo -f /etc/sudoers.d/99-jetson-clocks
