@@ -167,6 +167,7 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
        b) Add
        ```
        jetson ALL=(ALL) NOPASSWD: /usr/bin/jetson_clocks
+       jetson ALL=(ALL) NOPASSWD: /sbin/shutdown
        ```
 
     4.  Enable and start the service:
