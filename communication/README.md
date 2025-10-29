@@ -145,8 +145,8 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         User=jetson
         Group=jetson
         
-        WorkingDirectory=/home/jetson6/Documents/tcpip
-        ExecStart=/usr/bin/python3 /home/jetson6/Documents/tcpip/launcher.py
+        WorkingDirectory=/home/jetson/Documents/tcpip
+        ExecStart=/usr/bin/python3 /home/jetson/Documents/tcpip/launcher.py
 
         # Restart the service if it ever fails
         Restart=always
