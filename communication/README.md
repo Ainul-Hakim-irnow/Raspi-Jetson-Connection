@@ -169,6 +169,11 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
        ```
        sudo systemctl restart jetson-launcher.service
        ```
+    6. Stop
+       ```
+       sudo systemctl stop jetson-launcher.service
+       ```
+       
 
 ---
 
