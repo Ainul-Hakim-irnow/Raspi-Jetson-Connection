@@ -132,7 +132,6 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         ```bash
         sudo nano /etc/systemd/system/jetson-launcher.service
         ```
-
     2.  Paste the following content into the file. **You MUST change the paths and username.**
 
         ```ini
@@ -144,6 +143,8 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         [Service]
         User=jetson
         Group=jetson
+
+        ExecStartPre=/usr/bin/sudo /usr/bin/jetson_clocks
         
         WorkingDirectory=/home/jetson/Documents/tcpip
         ExecStart=/usr/bin/python3 /home/jetson/Documents/tcpip/launcher.py
@@ -158,6 +159,14 @@ This guide assumes you have a functional network where the Raspberry Pi and all 
         ```
 
     3.  Save the file (`Ctrl+O`, `Enter`) and exit (`Ctrl+X`).
+       a) Unloack sudo key (for jetson only)
+       ```
+       sudo visudo -f /etc/sudoers.d/99-jetson-clocks
+       ```
+       b) Add
+       ```
+       jetson ALL=(ALL) NOPASSWD: /usr/bin/jetson_clocks
+       ```
 
     4.  Enable and start the service:
         ```bash
